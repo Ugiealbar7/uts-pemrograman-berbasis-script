@@ -1,0 +1,237 @@
+/* Reset and body styling */
+* {
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}   
+body {
+    background-color: #2F1B41;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+/* Header */
+header { 
+    background-color: #f3f3f5;
+    padding: 5px;
+    text-align: left;
+
+    font-size: 20px;
+    color: rgb(1, 1, 1);
+} 
+img {
+    width: 5rem;
+    height: 100px;
+}
+
+/* Navigation styling */
+nav {
+    float: left;
+    width: 25%;
+    height: 550px;
+    background: rgb(61, 61, 62);
+    padding: 20px;
+    box-sizing: border-box;
+}     
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px 0;
+}
+nav a:hover {
+    color: #FFD700; /* Hover color for better visibility */
+}
+
+/* Article styling */
+section {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(247, 247, 249);
+    height: 550px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border: 7px solid #060606;
+}
+section h1 {
+    font-size: 2em;
+    margin-top: 0;
+    color: #010101;
+}
+section p {
+    font-size: 1.2em;
+    color: #010101;
+}
+
+/* Aside styling */
+aside {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    background-color: rgb(61, 61, 62);;
+    height: 550px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+aside h1 {
+    font-size: 1.8em;
+    margin-top: 0;
+}
+aside ul {
+    padding: 0;
+    list-style-type: none;
+}
+aside li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Clearfix for content */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}   
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f3f3f5;
+    font-family: Arial, sans-serif;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-left p, .footer-right p, .footer-center p {
+    margin: 5px 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+footer p {
+    font-size: 14px;
+    color: black;
+}
+
+.footer-center p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-right p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+footer::after {
+    content: "100%";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* Responsive adjustments */
+
+/* Responsive adjustments for tablet landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav {
+        float: left;
+        width: 25%; /* NAV occupies 25% of the width */
+        height: auto;
+    }
+    section {
+        float: left;
+        width: 75%; /* Section occupies 75% of the width */
+        height: auto;
+    }
+    aside {
+        float: left;
+        width: 100%; /* Aside below the NAV and Section, full width */
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+/* Responsive adjustments for tablet portrait */
+@media (max-width: 767px) {
+    header, footer {
+        width: 100%; /* Full width */
+    }
+    nav {
+        float: none;
+        width: 100%; /* NAV takes full width */
+        height: auto;
+    }
+    section {
+        float: none;
+        width: 100%; /* Section also takes full width */
+        height: none;
+        margin-top: 10px;
+    }
+    aside {
+        float: none;
+        width: 100%; /* Aside below the section, full width */
+        height: auto;
+        margin-top: 10px;
+    }
+}
+
+/* Tablet Landscape (Add additional tablet adjustments if necessary) */
+@media (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
+    nav {
+        width: 25%;
+        height: 55vh;
+    }
+    section {
+        width: 75%;
+        height: 55vh;
+    }
+}
+
+/* Tablet Portrait */
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
+    nav, section, aside {
+        width: 100%;
+        float: none;
+    }
+    aside {
+        margin-top: 15px;
+    }
+}
